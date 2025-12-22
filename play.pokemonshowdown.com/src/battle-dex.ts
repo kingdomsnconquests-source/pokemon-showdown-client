@@ -228,20 +228,24 @@ export const Dex = new class implements ModdedDex {
 	readonly statNamesExceptHP: readonly Dex.StatNameExceptHP[] = ['atk', 'def', 'spa', 'spd', 'spe'];
 
 	pokeballs: string[] | null = null;
-
+/**
 	resourcePrefix = (() => {
 		let prefix = '';
 		if (window.document?.location?.protocol !== 'http:') prefix = 'https:';
 		return `${prefix}//${window.Config ? Config.routes.client : 'play.pokemonshowdown.com'}/`;
 	})();
-
+*/
+	resourcePrefix = 'https://raw.githubusercontent.com/kingdomsnconquests-source/pokemon-sprites/tree/main/'
+/**
 	fxPrefix = (() => {
 		const protocol = (window.document?.location?.protocol !== 'http:') ? 'https:' : '';
 		return `${protocol}//${window.Config ? Config.routes.client : 'play.pokemonshowdown.com'}/fx/`;
 	})();
+*/
+	fxPrefix = 'https://raw.githubusercontent.com/kingdomsnconquests-source/pokemon-sprites/tree/main/fx/'
 
 	loadedSpriteData = { xy: 1, bw: 0 };
-	moddedDexes: { [mod: string]: ModdedDex } = {};
+	moddedDexes: { [mod: string]: ModdedDex } = {};	
 
 	/**
 	 * April Fools' Day setting:
