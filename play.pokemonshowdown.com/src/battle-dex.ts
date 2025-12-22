@@ -235,17 +235,17 @@ export const Dex = new class implements ModdedDex {
 		return `${prefix}//${window.Config ? Config.routes.client : 'play.pokemonshowdown.com'}/`;
 	})();
 */
-	resourcePrefix = 'https://raw.githubusercontent.com/kingdomsnconquests-source/pokemon-sprites/tree/main/'
+	resourcePrefix = 'https://raw.githubusercontent.com/kingdomsnconquests-source/pokemon-sprites/master/'
 /**
 	fxPrefix = (() => {
 		const protocol = (window.document?.location?.protocol !== 'http:') ? 'https:' : '';
 		return `${protocol}//${window.Config ? Config.routes.client : 'play.pokemonshowdown.com'}/fx/`;
 	})();
 */
-	fxPrefix = 'https://raw.githubusercontent.com/kingdomsnconquests-source/pokemon-sprites/tree/main/fx/'
+	fxPrefix = 'https://raw.githubusercontent.com/kingdomsnconquests-source/pokemon-sprites/master/fx/'
 
 	loadedSpriteData = { xy: 1, bw: 0 };
-	moddedDexes: { [mod: string]: ModdedDex } = {};	
+	moddedDexes: { [mod: string]: ModdedDex } = {};		
 
 	/**
 	 * April Fools' Day setting:
