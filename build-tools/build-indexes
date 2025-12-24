@@ -57,7 +57,7 @@ function requireNoCache(pathSpec) {
 		'monster', 'water1', 'bug', 'flying', 'field', 'fairy', 'grass', 'humanlike', 'water3', 'mineral', 'amorphous', 'water2', 'ditto', 'dragon', 'undiscovered',
 	].map(x => toID(x) + ' egggroup'));
 	index = index.concat([
-		'cqban', 'cq', 'cqnfe', 'cqlc', 'ou', 'uu', 'ru', 'nu', 'pu', 'zu', 'lc', 'nfe', 'uber', 'uubl', 'rubl', 'nubl', 'publ', 'zubl', 'cap', 'caplc', 'capnfe',
+		'cq', 'ou', 'uu', 'ru', 'nu', 'pu', 'zu', 'cqlc', 'lc', 'cqnfe', 'nfe', 'cqban','uber', 'uubl', 'rubl', 'nubl', 'publ', 'zubl', 'cap', 'caplc', 'capnfe',
 	].map(x => toID(x) + ' tier'));
 
 	const BattleArticleTitles = {};
@@ -596,13 +596,13 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 				return ["CAP", "CAP NFE", "CAP LC", "AG", "Uber", "OU", "(OU)", "UUBL", "UU", "NUBL", "NU", "NFE", "LC"];
 			}
 			return [
-				"CAP", "CAP NFE", "CAP LC", "CQ Ban", "CQ", "CQ NFE", "CQ LC", "AG", "Uber", "(Uber)", "OU", "(OU)", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "ZUBL", "ZU", "New", "NFE", "LC", "Unreleased",
+				"CAP", "CAP NFE", "CAP LC", "AG", "Uber", "(Uber)", "CQ Ban", "CQ", "CQ NFE", "CQ LC", "OU", "(OU)", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "ZUBL", "ZU", "New", "NFE", "LC", "Unreleased",
 			];
 		})();
 
 		for (const tier of tierOrder) {
 			if (tier in {
-				"CQ Ban": 1, CQ: 1, "CQ NFE": 1, "CQ LC": 1, OU: 1, UUBL: 1, AG: 1, Uber: 1, UU: 1, RU: 1, NU: 1, PU: 1, ZU: 1, NFE: 1, LC: 1, DOU: 1, DUU: 1,
+				CQ: 1, OU: 1, UUBL: 1, AG: 1, "CQ Ban": 1, Uber: 1, UU: 1, RU: 1, NU: 1, PU: 1, ZU: 1, "CQ NFE": 1, NFE: 1, "CQ LC": 1, LC: 1, DOU: 1, DUU: 1,
 				"(DUU)": 1, New: 1, Legal: 1, Regular: 1, "Restricted Legendary": 1, "CAP LC": 1,
 			}) {
 				let usedTier = tier;
