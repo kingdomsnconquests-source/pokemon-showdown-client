@@ -990,7 +990,7 @@ p.or:after {
 	background: url(../fx/oichi.png) center / contain no-repeat;
 }
 .roomcounters button:hover .usercount {
-	background: url(../fx/oichi-surprised.png) center no-repeat;
+	background: url(../fx/oichi-surprised.png) center / contain no-repeat;
 }
 .roomcounters .battlecount {
 	display: block;
