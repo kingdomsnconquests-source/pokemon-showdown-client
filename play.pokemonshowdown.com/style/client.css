@@ -987,10 +987,10 @@ p.or:after {
 	position: absolute;
 	left: -30px;
 	bottom: -5px;
-	background: url(../fx/oichi.png) center no-repeat;
+	background: url(../sprites/gen5/oichi.png) center no-repeat;
 }
 .roomcounters button:hover .usercount {
-	background: url(../fx/oichi-surprised.png) center no-repeat;
+	background: url(../sprites/gen5ani/oichi-surprised.png) center no-repeat;
 }
 .roomcounters .battlecount {
 	display: block;

@@ -28,10 +28,10 @@ function requireScript(url) {
 	document.head.appendChild(scriptEl);
 }
 
-linkStyle('https://play.pokemonshowdown.com/style/font-awesome.css?');
-linkStyle('https://play.pokemonshowdown.com/style/battle.css?a7');
-linkStyle('https://play.pokemonshowdown.com/style/replay.css?a7');
-linkStyle('https://play.pokemonshowdown.com/style/utilichart.css?a7');
+linkStyle('https://client.kingdomsnconquests.dynv6.net/style/font-awesome.css?');
+linkStyle('https://client.kingdomsnconquests.dynv6.net/style/battle.css?a7');
+linkStyle('https://client.kingdomsnconquests.dynv6.net/style/replay.css?a7');
+linkStyle('https://client.kingdomsnconquests.dynv6.net/utilichart.css?a7');
 
 requireScript('https://play.pokemonshowdown.com/js/lib/ps-polyfill.js');
 requireScript('https://play.pokemonshowdown.com/config/config.js?a7');
