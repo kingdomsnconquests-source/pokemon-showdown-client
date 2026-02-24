@@ -2025,9 +2025,13 @@ export class BattleTooltips {
 		) {
 			value.set(20, 'Battle Bond');
 		}
-		if (move.id === 'shardsword') {
+		if (move.id === 'shardsword' && target) {
 			const maxHP = pokemon.maxhp;
 			value.set(Math.floor(maxHP / 4) + 1);
+		}
+		if (move.id === 'transcendentflash' && target) {
+			const maxHP = pokemon.maxhp;
+			value.set(Math.floor(maxHP / 5) + 1);
 		}
 		// Moves that check opponent speed
 		if (move.id === 'electroball' && target) {
