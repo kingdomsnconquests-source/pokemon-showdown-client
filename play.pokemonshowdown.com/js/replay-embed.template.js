@@ -28,26 +28,26 @@ function requireScript(url) {
 	document.head.appendChild(scriptEl);
 }
 
-linkStyle('https://client.kingdomsnconquests.dynv6.net/style/font-awesome.css?');
-linkStyle('https://client.kingdomsnconquests.dynv6.net/style/battle.css?a7');
-linkStyle('https://client.kingdomsnconquests.dynv6.net/style/replay.css?a7');
-linkStyle('https://client.kingdomsnconquests.dynv6.net/utilichart.css?a7');
+linkStyle('../style/font-awesome.css?');
+linkStyle('../style/battle.css?a7');
+linkStyle('../style/replay.css?a7');
+linkStyle('../utilichart.css?a7');
 
-requireScript('https://client.kingdomsnconquests.dynv6.net/js/lib/ps-polyfill.js');
-requireScript('https://client.kingdomsnconquests.dynv6.net/config/config.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/js/lib/jquery-1.11.0.min.js');
-requireScript('https://client.kingdomsnconquests.dynv6.net/js/lib/html-sanitizer-minified.js');
-requireScript('https://client.kingdomsnconquests.dynv6.net/js/battle-sound.js');
-requireScript('https://client.kingdomsnconquests.dynv6.net/data/pokedex-mini.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/data/pokedex-mini-bw.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/data/graphics.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/data/pokedex.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/data/moves.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/data/abilities.js?a7');
-requireScript('https://play.pokemonshowdown.com/data/items.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/data/teambuilder-tables.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/js/battle-tooltips.js?a7');
-requireScript('https://client.kingdomsnconquests.dynv6.net/js/battle.js?a7');
+requireScript('../js/lib/ps-polyfill.js');
+requireScript('../config/config.js?a7');
+requireScript('../js/lib/jquery-1.11.0.min.js');
+requireScript('../js/lib/html-sanitizer-minified.js');
+requireScript('../js/battle-sound.js');
+requireScript('../data/pokedex-mini.js?a7');
+requireScript('../data/pokedex-mini-bw.js?a7');
+requireScript('../data/graphics.js?a7');
+requireScript('../data/pokedex.js?a7');
+requireScript('../data/moves.js?a7');
+requireScript('../data/abilities.js?a7');
+requireScript('../data/items.js?a7');
+requireScript('../data/teambuilder-tables.js?a7');
+requireScript('../js/battle-tooltips.js?a7');
+requireScript('../js/battle.js?a7');
 
 var Replays = {
 	battle: null,
