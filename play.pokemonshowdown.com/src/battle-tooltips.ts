@@ -1063,17 +1063,31 @@ export class BattleTooltips {
 			clientPokemon?.effectiveAbility(serverPokemon) ?? (serverPokemon.ability || serverPokemon.baseAbility)
 		);
 
-		// check for burn, paralysis, guts, quick feet
+		// check for burn, paralysis, guts, quick feet, pride
 		if (pokemon.status) {
 			if (this.battle.gen > 2 && ability === 'guts') {
 				stats.atk = Math.floor(stats.atk * 1.5);
+			} else if (this.battle.gen > 2 && ability === 'pride' && stats.atk > stats.spa) {
+				stats.atk = Math.floor(stats.atk * 1.3);
+			} else if (this.battle.gen > 2 && ability === 'pride' && stats.spa > stats.atk) {
+				stats.spa = Math.floor(stats.spa * 1.3);
 			} else if (this.battle.gen < 2 && pokemon.status === 'brn') {
 				stats.atk = Math.floor(stats.atk * 0.5);
+			} else if (this.battle.gen > 2 && pokemon.status === 'frz') {
+				stats.spa = Math.floor(stats.spa * 0.5);
 			}
 
 			// Paralysis is calculated later in newer generations, so we need to apply it early here
 			if (this.battle.gen <= 2 && pokemon.status === 'par') {
 				stats.spe = Math.floor(stats.spe * 0.25);
+			}
+		}
+
+		if (pokemon.status && ability === 'pride') {
+			if (stats.def > stats.spd) {
+				stats.def = Math.floor(stats.def * 1.3);
+			} else if (stats.spd > stats.def) {
+				stats.spd = Math.floor(stats.spd * 1.3);
 			}
 		}
 
@@ -1271,6 +1285,9 @@ export class BattleTooltips {
 		}
 		if (item === 'choicescarf' && !clientPokemon?.volatiles['dynamax']) {
 			speedModifiers.push(1.5);
+		}
+		if (item === 'wingedboots') {
+			speedModifiers.push(1.3);
 		}
 		if (item === 'ironball' || speedHalvingEVItems.includes(item)) {
 			speedModifiers.push(0.5);
