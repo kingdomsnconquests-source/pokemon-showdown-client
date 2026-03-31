@@ -1165,6 +1165,9 @@ export class BattleTooltips {
 		if (ability === 'hustle' || (ability === 'gorillatactics' && !clientPokemon?.volatiles['dynamax'])) {
 			stats.atk = Math.floor(stats.atk * 1.5);
 		}
+		if (ability === 'sprint') {
+			stats.spe = Math.floor(stats.spe * 1.3);
+		}
 		if (weather) {
 			if (this.battle.gen >= 4 && this.pokemonHasType(pokemon, 'Rock') && weather === 'sandstorm') {
 				stats.spd = Math.floor(stats.spd * 1.5);
@@ -1287,7 +1290,7 @@ export class BattleTooltips {
 			speedModifiers.push(1.5);
 		}
 		if (item === 'wingedboots') {
-			speedModifiers.push(1.3);
+			speedModifiers.push(1.2);
 		}
 		if (item === 'ironball' || speedHalvingEVItems.includes(item)) {
 			speedModifiers.push(0.5);
