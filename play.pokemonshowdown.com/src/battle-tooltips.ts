@@ -1224,7 +1224,7 @@ export class BattleTooltips {
 				speedModifiers.push(2);
 			}
 			for (const statName of Dex.statNamesExceptHP) {
-				if (clientPokemon.volatiles['protosynthesis' + statName] || clientPokemon.volatiles['quarkdrive' + statName]) {
+				if (clientPokemon.volatiles['protosynthesis' + statName] || clientPokemon.volatiles['quarkdrive' + statName] || clientPokemon.volatiles['ponigiri' + statName]) {
 					if (statName === 'spe') {
 						speedModifiers.push(1.5);
 					} else {
